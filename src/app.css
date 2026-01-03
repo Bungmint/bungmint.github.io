@@ -1,0 +1,65 @@
+/* Import Google Fonts - must be first */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply bg-white text-neutral-700 antialiased;
+		font-family: 'Lato', sans-serif;
+	}
+
+	a {
+		@apply text-primary transition-colors duration-200;
+	}
+
+	a:hover {
+		@apply text-primary-hover;
+	}
+
+	h1 {
+		@apply text-3xl font-bold text-neutral-800 mb-4;
+	}
+
+	h2 {
+		@apply text-2xl font-semibold text-neutral-800 mb-3 mt-8;
+	}
+
+	h3 {
+		@apply text-xl font-semibold text-neutral-800 mb-2;
+	}
+
+	::selection {
+		@apply bg-neutral-200;
+	}
+}
+
+@layer components {
+	.container-main {
+		@apply w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+	}
+
+	.link {
+		@apply text-primary hover:text-primary-hover underline decoration-primary/30 hover:decoration-primary-hover/50 transition-colors duration-200;
+	}
+
+	.section {
+		@apply py-6;
+	}
+
+	.card {
+		@apply bg-white rounded-lg p-4;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
