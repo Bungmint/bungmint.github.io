@@ -23,8 +23,6 @@
 <Seo title="Projects - Youngmin Park" description="Projects by Youngmin Park." />
 
 <article class="layout-md">
-	<h1 class="mb-8 text-2xl font-semibold text-black">Projects</h1>
-
 	{#if projects.length > 0}
 		<div class="grid gap-4">
 			{#each projects as project}

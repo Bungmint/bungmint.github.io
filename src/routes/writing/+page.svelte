@@ -22,7 +22,6 @@
 <Seo title="Writing - Youngmin Park" description="Blog posts and writing by Youngmin Park." />
 
 <article class="layout-md">
-	<h1 class="mb-8 text-2xl font-semibold text-black">Writing</h1>
 
 	{#if posts.length > 0}
 		<div class="grid gap-6">

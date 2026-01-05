@@ -1,11 +1,33 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import Workplace from './Workplace.svelte';
 </script>
 
 <Seo title="Resume - Youngmin Park" description="Resume and CV of Youngmin Park." />
 
 <article class="layout-md">
-	<h1 class="mb-8 text-2xl font-semibold text-black">Resume</h1>
+	<section class="mb-12">
+		<h2 class="heading2">Professional Work</h2>
+		<!-- Add work experience entries here -->
+		<Workplace 
+		title="Software Engineer Intern" 
+		company="Jane Street" 
+		url="https://www.janestreet.com/" 
+		dates="May 2025 - Aug 2025" 
+		location="New York, NY" 
+		>
+		<li>ML team</li>
+		</Workplace>
+		<Workplace 
+		title="Software Engineer Intern" 
+		company="Meta" 
+		url="https://www.meta.com/" 
+		dates="May 2024 - Aug 2024" 
+		location="Menlo Park, CA" 
+		>
+		<li>GenAI team</li>
+		</Workplace>
+	</section>
 
 	<section class="mb-12">
 		<h2 class="heading2">Education</h2>
@@ -23,10 +45,34 @@
 		</div>
 	</section>
 
-	<section>
-		<h2 class="heading2">Contact</h2>
-		<p class="text-neutral-600">
-			<a href="mailto:youngminpark@berkeley.edu" class="link">youngminpark@berkeley.edu</a>
-		</p>
+	<section class="mb-12">
+		<h2 class="heading2">Awards and Honors</h2>
+		<!-- Add awards and honors entries here -->
+		<div class="mb-4">
+		<h3 class="font-medium mb-1">Computer Science:</h3>
+		<ul>
+		  <li>
+			<b>International Collegiate Programming Contest (ICPC):</b> World Finalist (2024,
+			2025)
+		  </li>
+		</ul>
+	  </div>
 	</section>
+
 </article>
+
+<style lang="postcss">
+	@reference "tailwindcss";
+
+	b {
+	  @apply font-medium;
+	}
+  
+	ul {
+	  @apply list-disc pl-7 marker:text-neutral-400;
+	}
+  
+	.byline {
+	  @apply font-serif italic;
+	}
+  </style>
