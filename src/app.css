@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@layer base {
+	hr {
+		border-color: var(--color-neutral-200);
+	}
+}
+
+@layer components {
+	.link {
+		text-decoration-line: underline;
+		text-decoration-color: var(--color-neutral-300);
+		text-underline-offset: 2px;
+		transition-property: color, text-decoration-color;
+		transition-duration: 150ms;
+	}
+
+	.link:hover {
+		text-decoration-color: var(--color-neutral-400);
+	}
+
+	.layout-md {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 65ch;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.layout-md {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+
+	.heading2 {
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		font-weight: 600;
+		color: black;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	color: var(--color-neutral-700);
+}
+
+@media (min-width: 640px) {
+	body {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+}
+
+::selection {
+	background-color: var(--color-neutral-200);
+}
